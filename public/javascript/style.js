@@ -16,11 +16,12 @@ function openTab(tabName, tabCont, elmnt, color) {
 
     // Show the specific tab content
     document.getElementById(tabName).style.display = "block";
-    document.getElementById(tabName).style.backgroundColor = color;
     document.getElementById(tabCont).style.display = "block"
 
     // Add the specific color to the button used to open the tab content
     elmnt.style.backgroundColor = color;
+    document.getElementById(tabName).style.backgroundColor = color;
+    document.getElementById(tabCont).style.backgroundColor = color;
 }
 
 // Get the element with id="defaultOpen" and click on it
