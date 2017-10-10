@@ -2,3 +2,7 @@
 	box-sizing: border-box;
 	/*background: orange;*/
 }
+.container {
+	width: 75%;
+	text-align: center;
+}
