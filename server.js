@@ -11,10 +11,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-app.use(express.static("public"));
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
+
+var routes = require("./controllers/budget-controllers.js");
+app.use("/", routes);
 
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
