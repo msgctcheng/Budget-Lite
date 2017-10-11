@@ -2,3 +2,7 @@
 	box-sizing: border-box;
 	/*background: orange;*/
 }
+.container {
+	max-width: 75%;
+
+}
