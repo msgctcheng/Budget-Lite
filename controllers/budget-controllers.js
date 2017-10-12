@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var db = require("../models");
+var path = require("path");
 var GoogleAuth = require('google-auth-library');
 
 router.get("/", function(req, res) {
@@ -32,6 +33,10 @@ router.post("/login/verify", function(req, res) {
             console.log('payload: ', payload);
             console.log('userid: ', userid);
         });
+});
+
+router.get("/data.csv", function(req, res) {
+	res.sendFile(path.join(__dirname, "data.csv"));
 });
 
 router.get("/api/transactions", function(req, res) {
