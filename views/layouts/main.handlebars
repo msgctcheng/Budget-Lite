@@ -1,61 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="/public/assets/css/style.css" type="text/css" />
-		<title>Budget App</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/public/assets/javascript/style.js"></script>
-		<meta name="google-signin-client_id" content="482330377038-kppprl611bgmbattktqroa9rl663dh2f.apps.googleusercontent.com">
-	</head>
-	    <style>
-    body { font: 12px Arial;}
 
-    path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-    </style>
-	<body>
-		<a href="#" onclick="signOut();">Sign out</a>
-		{{{ body }}}
-	</body>
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
+<head>
+	<meta charset="UTF-8">
+	<title>Budget App</title>
+	<meta name="google-signin-client_id" content="482330377038-kppprl611bgmbattktqroa9rl663dh2f.apps.googleusercontent.com">
+</head>
+
+<body>
+	<a href="#" onclick="signOut();">Sign out</a>
+	{{{ body }}}
+	
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/assets/javascript/style.js"></script>
+	<script src="http://apis.google.com/js/platform.js" async defer></script>
 	<script>
 		function onSignIn(googleUser) {
-		    var profile = googleUser.getBasicProfile();
-		    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-		    console.log('Name: ' + profile.getName());
-		    console.log('Image URL: ' + profile.getImageUrl());
-		    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+			var profile = googleUser.getBasicProfile();
+			console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+			console.log('Name: ' + profile.getName());
+			console.log('Image URL: ' + profile.getImageUrl());
+			console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-		    var currentURL = window.location.origin;
-		    var id_token = googleUser.getAuthResponse().id_token;
-		    
+			var currentURL = window.location.origin;
+			var id_token = googleUser.getAuthResponse().id_token;
+
 			var xhr = new XMLHttpRequest();
 			xhr.open('POST', currentURL + "/login/verify");
 			xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-			xhr.onload = function() {
-			  console.log('Signed in as: ' + xhr.responseText);
+			xhr.onload = function () {
+				console.log('Signed in as: ' + xhr.responseText);
 			};
 			xhr.send('idtoken=' + id_token);
 		}
-
-		
-
 		function signOut() {
-		    var auth2 = gapi.auth2.getAuthInstance();
-		    auth2.signOut().then(function() {
-		        console.log('User signed out.');
-		    });
+			var auth2 = gapi.auth2.getAuthInstance();
+			auth2.signOut().then(function () {
+				console.log('User signed out.');
+			});
 		}
 	</script>
+</body>
+
 </html>
