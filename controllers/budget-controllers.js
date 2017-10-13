@@ -12,6 +12,9 @@ router.get("/", function(req, res) {
 router.get("/login", function(req, res) {
     res.render("login");
 });
+router.get("/newuser", function(req, res) {
+    res.render("new")
+});
 
 router.post("/login/verify", function(req, res) {
     var CLIENT_ID = '482330377038-kppprl611bgmbattktqroa9rl663dh2f.apps.googleusercontent.com';
