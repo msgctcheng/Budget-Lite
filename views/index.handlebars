@@ -55,8 +55,7 @@
 </div>
 <!-- Appends d3 graph to empty div -->
 <div class="modalContent">
-    <span class="closeModal moditem">&times;</span>
-    {{!-- Plus Minus (Slider or Radial) Amount Category: dropdown Description --}}
+    
     <div class="switch moditem">
         <input type="checkbox" class="switch-checkbox" id="myswitch" checked>
         <label class="switch-label" for="myswitch">
@@ -65,7 +64,7 @@
         </label>
     </div>
 
-    <input class="amount moditem" type="text" placeholder="Amount"><br>
+    <input class="amount moditem" type="text" placeholder="Amount">
     
     <select id="drop"  class="dropCont moditem">
         <option value="rent">Rent</option>
@@ -75,10 +74,10 @@
         <option value="other">Other</option>
     </select>
    
-    <input class="description moditem" type="text" placeholder="Description"> <br>
+    <input class="description moditem" type="text" placeholder="Description"> 
 
     <button class="modalSubmit moditem">Submit</button> 
-
+    <span class="closeModal moditem">&times;</span>
 </div>
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
