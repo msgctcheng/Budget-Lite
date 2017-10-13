@@ -18,6 +18,10 @@ path {
     stroke-width: 1;
     shape-rendering: crispEdges;
 }
+body {
+    font-family: "helvetica";
+    background-color: #f5f5f5;
+}
 .switch {
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
@@ -64,5 +68,35 @@ path {
 .switch-checkbox:checked + .switch-label .switch-switch {
     right: 0px; 
 }
+.tablink {
+    background-color: #555555;
+    color: white;
+    float: left;
+    border: none;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+.tablink:hover {
+    background-color: #777777;
+}
+.tabcontent {
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+.logBox {
+    float: right;
+    position: relative;
+    top: -25px;
+}
+/* #FF473C - red
+    #A9E847 - green
+    #2F3AFF - blue
+    #FFDF2F - yellow  
 
-
+*/

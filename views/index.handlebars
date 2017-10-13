@@ -1,17 +1,21 @@
-<div> {{budget.testing}} </div>
+<div style="display: none"> {{budget.testing}} </div>
 <div id="dashboard_top" class="tabcontent tabheader">
+    <div class="logBox"><a href="#" onclick="signOut();">Sign out</a></div> 
     <h3>Dashboard</h3>
     <p>User Dashboard</p>
 </div>
 <div id="savings_top" class="tabcontent tabheader">
+ <div class="logBox"><a href="#" onclick="signOut();">Sign out</a></div>
     <h3>Savings</h3>
     <p>User's Savings</p>
 </div>
 <div id="spending_top" class="tabcontent tabheader">
+   <div class="logBox"><a href="#" onclick="signOut();">Sign out</a></div>
     <h3>Spending</h3>
     <p>User's Spending</p>
 </div>
 <div id="goals_top" class="tabcontent tabheader">
+    <div class="logBox"><a href="#" onclick="signOut();">Sign out</a></div>
     <h3>Goals</h3>
     <p>User Goals</p>
 </div>
@@ -23,13 +27,13 @@
 
 <button class="tablink" onclick="openTab('goals_top', 'goals_bot', this, 'orange')">Goals</button>
 
-<div id="dashboard_bot" class="tabcontent tabheader">
+<div id="dashboard_bot" class="tabcontent tabBody">
     <h3>Dashboard</h3>
     <p>User Dashboard</p>
     <button class="modalButton">Add Transaction</button>
 </div>
 
-<div id="savings_bot" class="tabcontent tabheader">
+<div id="savings_bot" class="tabcontent tabBody">
     <h3>Savings</h3>
     <div class="graph"></div>
     <p>User's Savings</p>
@@ -37,14 +41,14 @@
     <button class="modalButton">Add Transaction</button>
 </div>
 
-<div id="spending_bot" class="tabcontent tabheader">
+<div id="spending_bot" class="tabcontent tabBody">
     <h3>Spending</h3>
     <div class="graph"></div>
     <p>User's Spending</p>
     <button class="modalButton">Add Transaction</button>
 </div>
 
-<div id="goals_bot" class="tabcontent tabheader">
+<div id="goals_bot" class="tabcontent tabBody">
     <h3>Goals</h3>
     <div class="graph"></div>
     <p>User Goals</p>
