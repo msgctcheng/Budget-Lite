@@ -1,23 +1,25 @@
 * {
-	box-sizing: border-box;
-	/*background: orange;*/
+    box-sizing: border-box;
+    /*background: orange;*/
 }
+
 .container {
     max-width: 75%;
     margin: auto;
-
 }
+
 .login_card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #83E85B;
     width: 75%;
     margin: auto;
     text-align: center;
     line-height: 30px;
-    padding: 25px;
+    padding: 50px;
     margin-top: 25%;
     color: white;
 }
+
 .loginBtn {
     border-radius: 20px;
     border: none;
@@ -25,20 +27,23 @@
     background-color: #666666;
     color: white;
 }
+
 .loginBtn:hover {
     background-color: #777777;
     cursor: pointer;
 }
+
 h1 {
     text-align: center;
     margin: auto;
-
 }
+
 path {
     stroke: steelblue;
     stroke-width: 2;
     fill: none;
 }
+
 .axis path,
 .axis line {
     fill: none;
@@ -46,72 +51,91 @@ path {
     stroke-width: 1;
     shape-rendering: crispEdges;
 }
+
 body {
     font-family: "helvetica";
     background-color: #a09b9b;
 }
+
 .switch {
-    position: relative; width: 90px;
-    -webkit-user-select:none; 
-    -moz-user-select:none; 
+    position: relative;
+    width: 90px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     -ms-user-select: none;
 }
+
 .switch-checkbox {
     display: none;
 }
+
 .switch-label {
-    display: block; 
-    overflow: hidden; 
+    display: block;
+    overflow: hidden;
     cursor: pointer;
-    border: 2px solid #FFFFFF; 
+    border: 2px solid #FFFFFF;
     border-radius: 20px;
 }
+
 .switch-inner {
-    display: block; width: 200%; 
+    display: block;
+    width: 200%;
     margin-left: -100%;
     transition: margin 0.3s ease-in 0s;
 }
-.switch-inner:before, .switch-inner:after {
-    display: block; 
-    float: left; 
-    width: 50%; 
-    height: 30px; 
-    padding: 0; 
+
+.switch-inner:before,
+.switch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
     line-height: 30px;
-    font-size: 24px; color: white; font-family: "Helvetica"; 
+    font-size: 24px;
+    color: white;
+    font-family: "Helvetica";
     font-weight: bold;
     box-sizing: border-box;
 }
+
 .switch-inner:before {
     content: " +";
     padding-left: 10px;
-    background-color: #34C247; 
+    background-color: #34C247;
     color: #FFFFFF;
 }
+
 .switch-inner:after {
     content: "- ";
     padding-right: 10px;
-    background-color: #F51B47; 
+    background-color: #F51B47;
     color: #FFFFFF;
     text-align: right;
 }
+
 .switch-switch {
-    display: block; width: 18px; 
+    display: block;
+    width: 18px;
     margin: 6px;
     background: #FFFFFF;
-    position: absolute; top: 0; 
+    position: absolute;
+    top: 0;
     bottom: 0;
     right: 56px;
-    border: 2px solid #FFFFFF; 
+    border: 2px solid #FFFFFF;
     border-radius: 20px;
-    transition: all 0.3s ease-in 0s; 
+    transition: all 0.3s ease-in 0s;
 }
-.switch-checkbox:checked + .switch-label .switch-inner {
+
+.switch-checkbox:checked+.switch-label .switch-inner {
     margin-left: 0;
 }
-.switch-checkbox:checked + .switch-label .switch-switch {
-    right: 0px; 
+
+.switch-checkbox:checked+.switch-label .switch-switch {
+    right: 0px;
 }
+
 .tablink {
     background-color: #666666;
     color: white;
@@ -125,47 +149,55 @@ body {
     font-size: 17px;
     width: 25%;
 }
+
 .tablink:hover {
     background-color: #777777;
 }
+
 .tabcontent {
     padding: 50px;
     color: white;
     text-align: center;
 }
+
 .logBox {
     float: right;
     position: relative;
     top: -25px;
 }
+
 input[type=text] {
     border: none;
-  
     box-sizing: border-box;
     padding: 10px 15px;
     border-radius: 20px;
 }
-select {
 
+select {
     border-radius: 20px;
     box-sizing: border-box;
     padding: 9px 10px;
-
 }
-.modalSubmit, .modalButton {
+select:hover {
+    cursor: pointer;
+}
+.modalSubmit,
+.modalButton {
     border-radius: 20px;
     border: none;
     padding: 9px 20px;
     background-color: #666666;
     color: white;
-
 }
-.modalSubmit:hover, .modalButton:hover {
+
+.modalSubmit:hover,
+.modalButton:hover {
     cursor: pointer;
     background-color: #777777;
 }
+
 .moditem {
-    float:left;
+    float: left;
     margin-left: 15px;
 }
 
@@ -176,19 +208,28 @@ select {
     background-color: #666666;
     color: white;
 }
+
 .abcRioButton:hover {
     background-color: #777777;
-    cursor: pointer; 
+    cursor: pointer;
 }
-a:link, a:visited {
+
+a:link,
+a:visited {
     background-color: #666666;
     color: white;
     padding: 10px 20px;
     border-radius: 20px;
     text-align: center;
-
 }
+
 a:hover {
     background-color: #777777;
     cursor: pointer;
+}
+.closeModal:hover {
+    cursor: pointer;
+}
+.modalContent {
+    
 }
