@@ -1,21 +1,29 @@
 <div style="display: none"> {{budget.testing}} </div>
 <div id="dashboard_top" class="tabcontent tabheader">
-    <div class="logBox"><a href="#" onclick="signOut();">Sign out</a></div> 
+    <div class="logBox">
+        <a href="#" onclick="signOut();">Sign out</a>
+    </div>
     <h2>Dashboard</h2>
     <p>User Dashboard</p>
 </div>
 <div id="savings_top" class="tabcontent tabheader">
- <div class="logBox"><a href="#" onclick="signOut();">Sign out</a></div>
+    <div class="logBox">
+        <a href="#" onclick="signOut();">Sign out</a>
+    </div>
     <h2>Savings</h2>
     <p>User's Savings</p>
 </div>
 <div id="spending_top" class="tabcontent tabheader">
-   <div class="logBox"><a href="#" onclick="signOut();">Sign out</a></div>
+    <div class="logBox">
+        <a href="#" onclick="signOut();">Sign out</a>
+    </div>
     <h2>Spending</h2>
     <p>User's Spending</p>
 </div>
 <div id="goals_top" class="tabcontent tabheader">
-    <div class="logBox"><a href="#" onclick="signOut();">Sign out</a></div>
+    <div class="logBox">
+        <a href="#" onclick="signOut();">Sign out</a>
+    </div>
     <h2>Goals</h2>
     <p>User Goals</p>
 </div>
@@ -55,7 +63,7 @@
 </div>
 <!-- Appends d3 graph to empty div -->
 <div class="modalContent">
-    
+
     <div class="switch moditem">
         <input type="checkbox" class="switch-checkbox" id="myswitch" checked>
         <label class="switch-label" for="myswitch">
@@ -65,18 +73,18 @@
     </div>
 
     <input class="amount moditem" type="text" placeholder="Amount">
-    
-    <select id="drop"  class="dropCont moditem">
+
+    <select id="drop" class="dropCont moditem">
         <option value="rent">Rent</option>
         <option value="bills">Bills</option>
         <option value="food">Food</option>
         <option value="gas">Gas</option>
         <option value="other">Other</option>
     </select>
-   
-    <input class="description moditem" type="text" placeholder="Description"> 
 
-    <button class="modalSubmit moditem">Submit</button> 
+    <input class="description moditem" type="text" placeholder="Description">
+
+    <button class="modalSubmit moditem">Submit</button>
     <span class="closeModal moditem">&times;</span>
 </div>
 
