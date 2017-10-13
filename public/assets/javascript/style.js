@@ -26,3 +26,21 @@ function openTab(tabName, tabCont, elmnt, color) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+var modal = document.getElementById("modal");
+var close = document.getElementsByClassName("closeModal");
+
+$(".modalButton").on("click", function () {
+    modal.style.display = "block";
+});
+
+$(".closeModal").on("click", function () {
+    modal.style.display="none";
+});
+        
+window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display="none";
+        }
+    }
