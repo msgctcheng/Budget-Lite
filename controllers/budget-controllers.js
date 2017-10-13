@@ -30,13 +30,22 @@ router.post("/login/verify", function(req, res) {
         function(e, login) {
             var payload = login.getPayload();
             var userid = payload['sub'];
-            console.log('payload: ', payload);
+            // console.log('payload: ', payload);
             console.log('userid: ', userid);
         });
+    db.User.find({
+        where: {
+            id: 33
+        }
+    }).then(function(dbUser) {
+        console.log('dbuser: ', dbUser);
+    });
+    // if (userid) in db then dashboard
+    // else create new user in db
 });
 
 router.get("/data.csv", function(req, res) {
-	res.sendFile(path.join(__dirname, "data.csv"));
+    res.sendFile(path.join(__dirname, "data.csv"));
 });
 
 router.get("/api/transactions", function(req, res) {
@@ -48,12 +57,12 @@ router.get("/api/transactions", function(req, res) {
 
 router.post("/api/transactions", function(req, res) {
     db.Transactions.create({
-    	Balance: req.body.Balance,
-    	Amount: req.body.Amount,
-    	Description: req.body.Description,
-    	Category: req.body.Category,
-    	UserId: req.body.UserId
-    })
+            Balance: req.body.Balance,
+            Amount: req.body.Amount,
+            Description: req.body.Description,
+            Category: req.body.Category,
+            UserId: req.body.UserId
+        })
         .then(function(dbTrans) {
             res.json(dbTrans);
         });
@@ -69,9 +78,9 @@ router.get("/api/user", function(req, res) {
 
 router.post("/api/create", function(req, res) {
     db.User.create({
-    	googleId: req.body.googleId,
-    	name: req.body.name
-    })
+            googleId: req.body.googleId,
+            name: req.body.name
+        })
         .then(function(dbUser) {
             res.json(dbUser);
         });
