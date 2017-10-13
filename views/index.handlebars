@@ -19,13 +19,13 @@
     <h3>Goals</h3>
     <p>User Goals</p>
 </div>
-<button class="tablink" onclick="openTab('dashboard_top', 'dashboard_bot', this, 'red')" id="defaultOpen">Dashboard</button>
+<button class="tablink" onclick="openTab('dashboard_top', 'dashboard_bot', this, '#2F3AFF')" id="defaultOpen">Dashboard</button>
 
-<button class="tablink" onclick="openTab('savings_top','savings_bot', this, 'green')">Savings</button>
+<button class="tablink" onclick="openTab('savings_top','savings_bot', this, '#FFE761')">Savings</button>
 
-<button class="tablink" onclick="openTab('spending_top', 'spending_bot', this, 'blue')">Spending</button>
+<button class="tablink" onclick="openTab('spending_top', 'spending_bot', this, '#FF473C')">Spending</button>
 
-<button class="tablink" onclick="openTab('goals_top', 'goals_bot', this, 'orange')">Goals</button>
+<button class="tablink" onclick="openTab('goals_top', 'goals_bot', this, '#83E85B')">Goals</button>
 
 <div id="dashboard_bot" class="tabcontent tabBody">
     <h3>Dashboard</h3>
@@ -56,9 +56,9 @@
 </div>
 <!-- Appends d3 graph to empty div -->
 <div class="modalContent">
-    <span class="closeModal">&times;</span>
+    <span class="closeModal moditem">&times;</span>
     {{!-- Plus Minus (Slider or Radial) Amount Category: dropdown Description --}}
-    <div class="switch">
+    <div class="switch moditem">
         <input type="checkbox" class="switch-checkbox" id="myswitch" checked>
         <label class="switch-label" for="myswitch">
             <span class="switch-inner"></span>
@@ -66,9 +66,9 @@
         </label>
     </div>
 
-    <input class="amount" type="text" placeholder="Amount"><br>
+    <input class="amount moditem" type="text" placeholder="Amount"><br>
     
-    <select id="drop"  class="dropCont">
+    <select id="drop"  class="dropCont moditem">
         <option value="rent">Rent</option>
         <option value="bills">Bills</option>
         <option value="food">Food</option>
@@ -76,9 +76,9 @@
         <option value="other">Other</option>
     </select>
    
-    <input class="description" type="text" placeholder="Description"> <br>
+    <input class="description moditem" type="text" placeholder="Description"> <br>
 
-    <button class="modalSubmit">Submit</button> 
+    <button class="modalSubmit moditem">Submit</button> 
 
 </div>
 
