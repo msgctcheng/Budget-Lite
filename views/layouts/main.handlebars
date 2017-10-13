@@ -9,8 +9,8 @@
 
 <body>
 
-	<div class="g-signin2" data-onsuccess="onSignIn"></div>
-	<a href="#" onclick="signOut();">Sign out</a>
+	<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>
+	<a href="#" onclick="signOut();">Sign out</a> -->
 
 	{{{ body }}}
 
@@ -28,6 +28,7 @@
 
 			var currentURL = window.location.origin;
 			var id_token = googleUser.getAuthResponse().id_token;
+			console.log("id token: ", id_token);
 
 			var xhr = new XMLHttpRequest();
 			xhr.open('POST', currentURL + "/login/verify");

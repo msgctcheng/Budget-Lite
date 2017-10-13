@@ -28,20 +28,31 @@ router.post("/login/verify", function(req, res) {
         token,
         CLIENT_ID,
         function(e, login) {
+            if (e) {
+                console.error(e);
+
+                res.json({
+                    error: e.message
+                });
+                return;
+            }
             var payload = login.getPayload();
             var userid = payload['sub'];
             // console.log('payload: ', payload);
-            console.log('userid: ', userid);
+            // console.log('userid: ', userid);
+            payload.valid = true;
+
+            res.json(payload);
+
         });
-    db.User.find({
-        where: {
-            googleId: userid
-        }
-    }).then(function(dbUser) {
-        console.log('dbuser: ', dbUser);
-    });
-    // if (userid) in db then dashboard
-    // else create new user in db
+    // db.User.find({
+    //     where: {
+    //         googleId: userid
+    //     }
+    // }).then(function(dbUser) {
+    //     console.log('dbuser: ', dbUser);
+    // });
+
 });
 
 router.get("/data.csv", function(req, res) {
