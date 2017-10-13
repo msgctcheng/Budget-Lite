@@ -16,9 +16,6 @@ router.get("/", function(req, res) {
 router.get("/login", function(req, res) {
     res.render("login");
 });
-router.get("/newuser", function(req, res) {
-    res.render("new")
-});
 
 router.post("/login/verify", function(req, res) {
     var CLIENT_ID = '482330377038-kppprl611bgmbattktqroa9rl663dh2f.apps.googleusercontent.com';
@@ -31,15 +28,35 @@ router.post("/login/verify", function(req, res) {
         token,
         CLIENT_ID,
         function(e, login) {
+            if (e) {
+                console.error(e);
+
+                res.json({
+                    error: e.message
+                });
+                return;
+            }
             var payload = login.getPayload();
             var userid = payload['sub'];
-            console.log('payload: ', payload);
-            console.log('userid: ', userid);
+            // console.log('payload: ', payload);
+            // console.log('userid: ', userid);
+            payload.valid = true;
+
+            res.json(payload);
+
         });
+    // db.User.find({
+    //     where: {
+    //         googleId: userid
+    //     }
+    // }).then(function(dbUser) {
+    //     console.log('dbuser: ', dbUser);
+    // });
+
 });
 
 router.get("/data.csv", function(req, res) {
-	res.sendFile(path.join(__dirname, "data.csv"));
+    res.sendFile(path.join(__dirname, "data.csv"));
 });
 
 router.get("/api/transactions", function(req, res) {
@@ -51,12 +68,12 @@ router.get("/api/transactions", function(req, res) {
 
 router.post("/api/transactions", function(req, res) {
     db.Transactions.create({
-    	Balance: req.body.Balance,
-    	Amount: req.body.Amount,
-    	Description: req.body.Description,
-    	Category: req.body.Category,
-    	UserId: req.body.UserId
-    })
+            Balance: req.body.Balance,
+            Amount: req.body.Amount,
+            Description: req.body.Description,
+            Category: req.body.Category,
+            UserId: req.body.UserId
+        })
         .then(function(dbTrans) {
             res.json(dbTrans);
         });
@@ -72,9 +89,9 @@ router.get("/api/user", function(req, res) {
 
 router.post("/api/create", function(req, res) {
     db.User.create({
-    	googleId: req.body.googleId,
-    	name: req.body.name
-    })
+            googleId: req.body.googleId,
+            name: req.body.name
+        })
         .then(function(dbUser) {
             res.json(dbUser);
         });
