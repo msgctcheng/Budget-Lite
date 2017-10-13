@@ -47,7 +47,13 @@ router.get("/api/transactions", function(req, res) {
 });
 
 router.post("/api/transactions", function(req, res) {
-    db.Transactions.create(req.body)
+    db.Transactions.create({
+    	Balance: req.body.Balance,
+    	Amount: req.body.Amount,
+    	Description: req.body.Description,
+    	Category: req.body.Category,
+    	UserId: req.body.UserId
+    })
         .then(function(dbTrans) {
             res.json(dbTrans);
         });
@@ -61,5 +67,14 @@ router.get("/api/user", function(req, res) {
     });
 });
 
+router.post("/api/create", function(req, res) {
+    db.User.create({
+    	googleId: req.body.googleId,
+    	name: req.body.name
+    })
+        .then(function(dbUser) {
+            res.json(dbUser);
+        });
+});
 
 module.exports = router;
