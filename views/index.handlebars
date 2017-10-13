@@ -59,16 +59,15 @@
         </label>
     </div>
     <input class="amount" type="text" placeholder="Amount"><br>
-    <div class="categoryDrop" >
-        <button onclick="dropDown()" class="dropbtn">Categories</button>
-        <div id="drop"  class="dropCont">
-            <a href="#" data-value="rent">Rent</a>
-            <a href="#" data-value="bills">Bills</a>
-            <a href="#" data-value="food">Food</a>
-            <a href="#" data-value="gas">Gas</a>
-            <a href="#" data-value="other">Other</a>
-        </div>
-    </div>
+    
+    <select id="drop"  class="dropCont">
+        <option value="rent">Rent</option>
+        <option value="bills">Bills</option>
+        <option value="food">Food</option>
+        <option value="gas">Gas</option>
+        <option value="other">Other</option>
+    </select>
+   
     <input class="description" type="text" placeholder="Description"> <br>
     <button class="modalSubmit">Submit</button> 
 
