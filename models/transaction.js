@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Transactions = sequelize.define("Transactions", {
-    Current: {
+    Balance: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       len: [1]
     },
-    Date: DataTypes.DATE
+    createdAt: DataTypes.DATE,
   });
 
   Transactions.associate = function(models) {
