@@ -5,11 +5,7 @@ var path = require("path");
 var GoogleAuth = require('google-auth-library');
 
 router.get("/", function(req, res) {
-    handlebarsObj = {
-        budget: {
-            "testing": "works"
-        }
-    };
+    
     res.render("index", handlebarsObj);
 });
 
@@ -35,7 +31,7 @@ router.post("/login/verify", function(req, res) {
         });
     db.User.find({
         where: {
-            id: 33
+            googleId: userid
         }
     }).then(function(dbUser) {
         console.log('dbuser: ', dbUser);
