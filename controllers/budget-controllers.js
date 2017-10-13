@@ -5,15 +5,16 @@ var path = require("path");
 var GoogleAuth = require('google-auth-library');
 
 router.get("/", function(req, res) {
-    
+    handlebarsObj = {
+        budget: {
+            "testing": "works"
+        }
+    };
     res.render("index", handlebarsObj);
 });
 
 router.get("/login", function(req, res) {
     res.render("login");
-});
-router.get("/newuser", function(req, res) {
-    res.render("new")
 });
 
 router.post("/login/verify", function(req, res) {
