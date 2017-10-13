@@ -3,7 +3,35 @@
 	/*background: orange;*/
 }
 .container {
-	max-width: 75%;
+    max-width: 75%;
+    margin: auto;
+
+}
+.login_card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    background-color: #83E85B;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    line-height: 30px;
+    padding: 25px;
+    margin-top: 25%;
+    color: white;
+}
+.loginBtn {
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    background-color: #666666;
+    color: white;
+}
+.loginBtn:hover {
+    background-color: #777777;
+    cursor: pointer;
+}
+h1 {
+    text-align: center;
+    margin: auto;
 
 }
 path {
@@ -85,7 +113,7 @@ body {
     right: 0px; 
 }
 .tablink {
-    background-color: #555555;
+    background-color: #666666;
     color: white;
     float: left;
     border: none;
@@ -114,21 +142,53 @@ input[type=text] {
     border: none;
   
     box-sizing: border-box;
-    padding: 12px 15px;
+    padding: 10px 15px;
     border-radius: 20px;
 }
 select {
 
     border-radius: 20px;
     box-sizing: border-box;
-    padding: 10px 10px;
+    padding: 9px 10px;
 
 }
 .modalSubmit, .modalButton {
     border-radius: 20px;
     border: none;
-    padding: 10px 10px;
+    padding: 9px 20px;
+    background-color: #666666;
+    color: white;
+
 }
 .modalSubmit:hover, .modalButton:hover {
+    cursor: pointer;
+    background-color: #777777;
+}
+.moditem {
+    float:left;
+    margin-left: 15px;
+}
+
+.abcRioButton {
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #666666;
+    color: white;
+}
+.abcRioButton:hover {
+    background-color: #777777;
+    cursor: pointer; 
+}
+a:link, a:visited {
+    background-color: #666666;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+
+}
+a:hover {
+    background-color: #777777;
     cursor: pointer;
 }
