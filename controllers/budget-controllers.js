@@ -5,24 +5,19 @@ var path = require("path");
 var GoogleAuth = require('google-auth-library');
 
 router.get("/", function(req, res) {
-    handlebarsObj = {
-        budget: {
-            "testing": "works"
-        }
-    };
-    res.render("index", handlebarsObj);
+    // db.User.find()
+    res.render("index");
 });
 
 router.get("/login", function(req, res) {
     res.render("login");
 });
 
-router.post("/login/verify", function(req, res, next) {
+router.post("/login/verify", function(req, res) {
     var CLIENT_ID = '482330377038-kppprl611bgmbattktqroa9rl663dh2f.apps.googleusercontent.com';
     var token = req.body.idtoken;
     var auth = new GoogleAuth;
     var client = new auth.OAuth2(CLIENT_ID, '', '');
-
     client.verifyIdToken(
         token,
         CLIENT_ID,
@@ -38,16 +33,17 @@ router.post("/login/verify", function(req, res, next) {
             var payload = login.getPayload();
             var userid = payload['sub'];
             payload.valid = true;
+            console.log('email', payload.email);
 
             db.User.find({
                 where: {
-                    googleId: token
+                    googleId : 'philippesdixon@gmail.com'
                 }
             }).then(function(dbUser) {
                 if (dbUser === null) {
                     res.json(false);
                 } else {
-                    res.json(true);
+                    res.json(payload);
                 }
             });
         });
@@ -58,8 +54,18 @@ router.get("/newUser", function(req, res) {
 });
 
 router.post("/addUser", function(req, res) {
-    // insert into db
-    console.log(req.body);
+    db.User.create({
+        name: req.body.name,
+        googleId: req.body.googleId
+    }).then(function(data) {
+        db.Transactions.create({
+            Amount: req.body.amount,
+            Balance: req.body.amount,
+            Category: "Other",
+            Description: "Initial Balance",
+            UserId: data.dataValues.id
+        });
+    });
     res.json(true);
 });
 
