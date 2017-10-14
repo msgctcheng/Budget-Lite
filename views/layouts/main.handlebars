@@ -38,6 +38,11 @@
 			};
 			xhr.send('idtoken=' + id_token);
 		}
+		function renderButton() {
+			gapi.signin2.render("g-signin2", {
+				
+			})
+		}
 		function signOut() {
 			var auth2 = gapi.auth2.getAuthInstance();
 			auth2.signOut().then(function () {

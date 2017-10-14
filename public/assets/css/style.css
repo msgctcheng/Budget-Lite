@@ -26,6 +26,9 @@
     padding: 10px 20px;
     background-color: #666666;
     color: white;
+    font-size: 16px;
+    text-decoration: underline;
+    margin-bottom: 20px;
 }
 
 .loginBtn:hover {
@@ -209,14 +212,27 @@ select:hover {
 .moditem {
     float: left;
     margin-left: 5%;
+    
 }
+#indexSign {
+    position: absolute;
+    top: 20px;
+    width:15%;
+}
+#loginSign {
 
+}
+.abcRioButtonContents {
+    font-size: 24px;
+}
 .abcRioButton {
     border-radius: 20px;
     margin: auto;
-    margin-top: 20px;
+
     background-color: #666666;
     color: white;
+   
+    text-align: center;
 }
 
 .abcRioButton:hover {
