@@ -20,12 +20,14 @@ $(document).ready(function() {
 			userId = "/?user_id=" + userId;
 		}
 		$.get("/api/transactions" + userId, function(data) {
-			console.log("Transactions", data[0]);
-			transactions = data[0];
-			if (!transactions || !transactions.length) {
-				displayEmpty(user);
-			} else {
-				initializeRows();
+			for (var j = 0; j < data.length; j++) {
+				console.log("Transactions", data[j]);
+				transactions = data[j];
+				if (!transactions || !transactions.length) {
+					displayEmpty(user);
+				} else {
+					initializeRows();
+				}
 			}
 		});
 	}
