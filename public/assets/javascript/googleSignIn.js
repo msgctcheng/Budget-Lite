@@ -7,7 +7,6 @@ function onSignIn(googleUser) {
 
     var currentURL = window.location.origin;
     var id_token = googleUser.getAuthResponse().id_token;
-    console.log("id token: ", id_token);
 
     if (window.location.href !== window.location.origin + "/newUser") {
         var xhr = new XMLHttpRequest();
@@ -17,18 +16,19 @@ function onSignIn(googleUser) {
             console.log('Signed in as: ' + xhr.responseText);
             if (xhr.responseText === "false") {
                 window.location = currentURL + "/newUser";
-            } 
+            } else if (window.location.href !== window.location.origin + "/") {
+            	window.location = currentURL + "/";
+            }
         };
         xhr.send('idtoken=' + id_token);
 
-        
     } else if (window.location.href === window.location.origin + "/newUser") {
     	$(".newSubmit").on("click", function() {
 
 	        var userInfo = {
 	                name: $(".userName").val().trim(),
 	                amount: $(".firstBudget").val().trim(),
-	                googleId: id_token
+	                googleId: profile.getEmail()
 	            }
 
 	        var currentURL = window.location.origin;
