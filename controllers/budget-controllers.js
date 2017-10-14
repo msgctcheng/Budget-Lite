@@ -57,8 +57,10 @@ router.get("/newUser", function(req, res) {
     res.render("new");
 });
 
-router.post("/newUserInfo", function(req, res) {
+router.post("/addUser", function(req, res) {
     // insert into db
+    console.log(req.body);
+    res.json(true);
 });
 
 router.get("/data.csv", function(req, res) {
