@@ -3,14 +3,23 @@ $(document).ready(function() {
 	// When user clicks submit on the transaction
 	$(".modalSubmit").on("click", function(event) {
 	  event.preventDefault();
-	  // Make a newTransaction object
-	  var newTransaction = {
-	    Balance: 
-	    Amount: $(".amount").val().trim(),
-	    Category: $(".dropCont").val().trim(),
-	    Description: $(".description").val().trim()
-	  };
-
+	  if ($("input[type=checkbox").prop("checked")) {
+		  // Make a newTransaction object
+		  var newTransaction = {
+		    Balance: 
+		    Amount: $(".amount").val().trim(),
+		    Category: $(".dropCont").val().trim(),
+		    Description: $(".description").val().trim()
+		  };
+	  } else {
+		  // Make a newTransaction object
+		  var newTransaction = {
+		    Balance: 
+		    Amount: $(".amount").val().trim(),
+		    Category: $(".dropCont").val().trim(),
+		    Description: $(".description").val().trim()
+		  };
+	  }
 	  // Send an AJAX POST-request with jQuery
 	  $.post("/api/transactions", newTransaction)
 	    // On success, run the following code
