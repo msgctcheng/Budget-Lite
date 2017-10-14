@@ -37,7 +37,7 @@ router.post("/login/verify", function(req, res) {
 
             db.User.find({
                 where: {
-                    googleId : 'philippesdixon@gmail.com'
+                    googleId : payload.email
                 }
             }).then(function(dbUser) {
                 if (dbUser === null) {
@@ -81,6 +81,7 @@ router.get("/api/transactions", function(req, res) {
 });
 
 router.post("/api/transactions", function(req, res) {
+    //do additing/subtraction math here
     db.Transactions.create({
             Balance: req.body.Balance,
             Amount: req.body.Amount,
