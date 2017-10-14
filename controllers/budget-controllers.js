@@ -17,12 +17,11 @@ router.get("/login", function(req, res) {
     res.render("login");
 });
 
-router.post("/login/verify", function(req, res) {
+router.post("/login/verify", function(req, res, next) {
     var CLIENT_ID = '482330377038-kppprl611bgmbattktqroa9rl663dh2f.apps.googleusercontent.com';
     var token = req.body.idtoken;
     var auth = new GoogleAuth;
     var client = new auth.OAuth2(CLIENT_ID, '', '');
-    console.log('token: ', token);
 
     client.verifyIdToken(
         token,
@@ -38,21 +37,30 @@ router.post("/login/verify", function(req, res) {
             }
             var payload = login.getPayload();
             var userid = payload['sub'];
-            // console.log('payload: ', payload);
-            // console.log('userid: ', userid);
             payload.valid = true;
 
-            res.json(payload);
-
+            db.User.find({
+                where: {
+                    googleId: token
+                }
+            }).then(function(dbUser) {
+                if (dbUser === null) {
+                    res.json(false);
+                } else {
+                    res.json(true);
+                }
+            });
         });
-    // db.User.find({
-    //     where: {
-    //         googleId: userid
-    //     }
-    // }).then(function(dbUser) {
-    //     console.log('dbuser: ', dbUser);
-    // });
+});
 
+router.get("/newUser", function(req, res) {
+    res.render("new");
+});
+
+router.post("/addUser", function(req, res) {
+    // insert into db
+    console.log(req.body);
+    res.json(true);
 });
 
 router.get("/data.csv", function(req, res) {

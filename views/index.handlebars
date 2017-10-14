@@ -4,97 +4,81 @@
     <div class="logBox">
         <a href="#" onclick="signOut();">Sign out</a>
     </div>
-    <h2>Dashboard</h2>
+    <h3>Dashboard</h3>
     <p>User Dashboard</p>
 </div>
 <div id="savings_top" class="tabcontent tabheader">
-    <div class="logBox">
-        <a href="#" onclick="signOut();">Sign out</a>
-    </div>
-    <h2>Savings</h2>
+    <h3>Savings</h3>
     <p>User's Savings</p>
 </div>
 <div id="spending_top" class="tabcontent tabheader">
-    <div class="logBox">
-        <a href="#" onclick="signOut();">Sign out</a>
-    </div>
-    <h2>Spending</h2>
+    <h3>Spending</h3>
     <p>User's Spending</p>
 </div>
 <div id="goals_top" class="tabcontent tabheader">
-    <div class="logBox">
-        <a href="#" onclick="signOut();">Sign out</a>
-    </div>
-    <h2>Goals</h2>
+    <h3>Goals</h3>
     <p>User Goals</p>
 </div>
-<button class="tablink" onclick="openTab('dashboard_top', 'dashboard_bot', this, '#2F3AFF')" id="defaultOpen">Dashboard</button>
-
-<button class="tablink" onclick="openTab('savings_top','savings_bot', this, '#FFE761')">Savings</button>
-
-<button class="tablink" onclick="openTab('spending_top', 'spending_bot', this, '#FF473C')">Spending</button>
-
-<button class="tablink" onclick="openTab('goals_top', 'goals_bot', this, '#83E85B')">Goals</button>
-
-<div id="dashboard_bot" class="tabcontent tabBody">
+<button class="tablink" onclick="openTab('dashboard_top', 'dashboard_bot', this, 'red')" id="defaultOpen">Dashboard</button>
+<button class="tablink" onclick="openTab('savings_top','savings_bot', this, 'green')">Savings</button>
+<button class="tablink" onclick="openTab('spending_top', 'spending_bot', this, 'blue')">Spending</button>
+<button class="tablink" onclick="openTab('goals_top', 'goals_bot', this, 'orange')">Goals</button>
+<div id="dashboard_bot" class="tabcontent tabheader">
     <h3>Dashboard</h3>
     <p>User Dashboard</p>
     <button class="modalButton">Add Transaction</button>
 </div>
 
-<div id="savings_bot" class="tabcontent tabBody">
+<div id="savings_bot" class="tabcontent tabheader">
     <h3>Savings</h3>
     <div class="graph"></div>
     <p>User's Savings</p>
+
     <button class="modalButton">Add Transaction</button>
 </div>
 
-<div id="spending_bot" class="tabcontent tabBody">
-    <div class="spendingCard card">
-        <h3>Spending</h3>
-        <div class="graph"></div>
-        <p>User's Spending</p>
-        <button class="modalButton">Add Transaction</button>
-    </div>
+<div id="spending_bot" class="tabcontent tabheader">
+    <h3>Spending</h3>
+    <div class="graph"></div>
+    <p>User's Spending</p>
+    <button class="modalButton">Add Transaction</button>
+    <div class="transactions-container"></div>
 </div>
 
-<div id="goals_bot" class="tabcontent tabBody">
-    <div class="goalsCard">
-        <h3>Goals</h3>
-        <div class="graph"></div>
-        <p>User Goals</p>
-        <button class="modalButton">Add Transaction</button>
-    </div>
+<div id="goals_bot" class="tabcontent tabheader">
+    <h3>Goals</h3>
+    <div class="graph"></div>
+    <p>User Goals</p>
+    <button class="modalButton">Add Transaction</button>
 </div>
 <!-- Appends d3 graph to empty div -->
-<div id="modal">
-    <div class="modalContent">
+<div class="modalContent">
+    <span class="closeModal">&times;</span>
+    {{!-- Plus Minus (Slider or Radial) Amount Category: dropdown Description --}}
+    <div class="switch">
+        
+        <input type="checkbox" class="switch-checkbox" id="myswitch" checked>
+        <label class="switch-label" for="myswitch">
+            <span class="switch-inner"></span>
+            <span class="switch-switch"></span>
+        </label>
+    </div>
+    <input class="amount" type="text" placeholder="Amount"><br>
+    
+    <select id="drop"  class="dropCont">
+        <option value="rent">Rent</option>
+        <option value="bills">Bills</option>
+        <option value="food">Food</option>
+        <option value="gas">Gas</option>
+        <option value="other">Other</option>
+    </select>
+   
+    <input class="description" type="text" placeholder="Description"> <br>
+    <button class="modalSubmit">Submit</button> 
 
-        <div class="switch moditem">
-            <input type="checkbox" class="switch-checkbox" id="myswitch" checked>
-            <label class="switch-label" for="myswitch">
-                <span class="switch-inner"></span>
-                <span class="switch-switch"></span>
-            </label>
-        </div>
-
-        <input class="amount moditem" type="text" placeholder="Amount">
-
-        <select id="drop" class="dropCont moditem">
-            <option value="rent">Rent</option>
-            <option value="bills">Bills</option>
-            <option value="food">Food</option>
-            <option value="gas">Gas</option>
-            <option value="other">Other</option>
-        </select>
-
-        <input class="description moditem" type="text" placeholder="Description">
-
-        <button class="modalSubmit moditem">Submit</button>
-        <span class="closeModal moditem">&times;</span>
-</div>
 </div>
 <script src="http://d3js.org/d3.v3.min.js"></script>
+
 <script>
     // Set the dimensions of the canvas / graph
     var margin = { top: 30, right: 20, bottom: 30, left: 50 },
