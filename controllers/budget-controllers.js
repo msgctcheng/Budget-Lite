@@ -37,7 +37,7 @@ router.post("/login/verify", function(req, res) {
 
             db.User.find({
                 where: {
-                    googleId : 'philippesdixon@gmail.com'
+                    googleId : payload.email
                 }
             }).then(function(dbUser) {
                 if (dbUser === null) {
