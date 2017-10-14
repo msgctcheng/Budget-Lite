@@ -211,7 +211,8 @@ select:hover {
 
 .moditem {
     float: left;
-    margin-left: 5%;
+    margin-left: 10px;
+  
     
 }
 #indexSign {
