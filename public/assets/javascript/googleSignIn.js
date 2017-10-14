@@ -7,7 +7,7 @@ function onSignIn(googleUser) {
 
     var currentURL = window.location.origin;
     var id_token = googleUser.getAuthResponse().id_token;
-
+    // commit
     if (window.location.href !== window.location.origin + "/newUser") {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', currentURL + "/login/verify");
