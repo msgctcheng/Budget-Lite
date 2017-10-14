@@ -1,0 +1,283 @@
+[33mcommit 8f5544feee24aa14d8a3249765be08cb46b9efe2[m[33m ([m[1;36mHEAD -> [m[1;32mLiz[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Christopher Cheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 22:27:27 2017 -0400
+
+    Update index.handlebars
+    
+    Fix index.handlebars, somehow went to a really old version.
+
+[33mcommit 0224978041532989e3afb71e43069cc225eaf139[m
+Merge: 73f027e e0f7983
+Author: Christopher Cheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 21:54:13 2017 -0400
+
+    Merge pull request #30 from msgctcheng/style
+    
+    Update CSS(5)
+
+[33mcommit e0f798351b3a500e1fd48d74d7d0ea9a173aedc8[m
+Merge: cb06f11 73f027e
+Author: Christopher Cheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 21:53:13 2017 -0400
+
+    Merge branch 'master' into style
+
+[33mcommit cb06f1165ddbbc0cb6002fa71e4ba688f7aae617[m
+Author: msgctcheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 21:41:13 2017 -0400
+
+    Update CSS(5)
+
+[33mcommit 73f027eb2d2d10f2ccb7e7ff27e34d4a332824ff[m
+Merge: 757aa0b 727bacb
+Author: psd314 <philippesdixon@gmail.com>
+Date:   Fri Oct 13 18:38:42 2017 -0700
+
+    Merge pull request #29 from msgctcheng/d3js
+    
+    auth progress
+
+[33mcommit 727bacb1b45a23b20e3f8591a1591ef39dab131e[m
+Author: Philippe Dixon <pdixon555@hotmail.com>
+Date:   Fri Oct 13 21:38:06 2017 -0400
+
+    auth progress
+
+[33mcommit 757aa0b22181df32b4aed11b593e7d19e920a7e5[m
+Merge: b001fde fd6f315
+Author: Elizabeth Prieto <eprieto.business@gmail.com>
+Date:   Fri Oct 13 21:34:15 2017 -0400
+
+    Merge pull request #28 from msgctcheng/Liz
+    
+    spending tab tries to pull data
+
+[33mcommit fd6f3155c4ed75c686738c9d5a0a835b5f116a0b[m[33m ([m[1;31morigin/Liz[m[33m)[m
+Author: Elizabeth Prieto <eprieto.business@gmail.com>
+Date:   Fri Oct 13 21:33:09 2017 -0400
+
+    spending tab tries to pull data
+
+[33mcommit b001fde92cedce6e5ac755c052d936f78b655662[m
+Merge: d2ce022 b6a9fcc
+Author: psd314 <philippesdixon@gmail.com>
+Date:   Fri Oct 13 18:00:44 2017 -0700
+
+    Merge pull request #27 from msgctcheng/d3js
+    
+    auth work
+
+[33mcommit b6a9fccaadbc84aa5d5433590cba33750c77a6b7[m
+Author: Philippe Dixon <pdixon555@hotmail.com>
+Date:   Fri Oct 13 20:59:48 2017 -0400
+
+    auth work
+
+[33mcommit d2ce022ab332baca82df15b5f6a96eccff558702[m
+Merge: a7c5f95 4b10450
+Author: Christopher Cheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 19:31:52 2017 -0400
+
+    Merge pull request #26 from msgctcheng/style
+    
+    Style
+
+[33mcommit 4b104500059b1f80edab8b1197024c2c1586eff8[m
+Merge: b9ee88d a7c5f95
+Author: msgctcheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 19:31:13 2017 -0400
+
+    Merge branch 'master' of https://github.com/msgctcheng/Project2
+
+[33mcommit b9ee88d3923e405ab44c7e9e5f086297627b49a2[m
+Author: msgctcheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 19:31:01 2017 -0400
+
+    Edit modal effects
+
+[33mcommit a7c5f95107570b7a3ad22aeb6dc735a52d2e30f6[m
+Merge: 55c1cb4 2375382
+Author: psd314 <philippesdixon@gmail.com>
+Date:   Fri Oct 13 15:48:09 2017 -0700
+
+    Merge pull request #25 from msgctcheng/d3js
+    
+    add sign in/sign out to login and index, change googleId from STRING …
+
+[33mcommit 23753825e5339a811c41a4dbb6f26bb1cbe42ff7[m
+Author: Philippe Dixon <pdixon555@hotmail.com>
+Date:   Fri Oct 13 18:47:09 2017 -0400
+
+    add sign in/sign out to login and index, change googleId from STRING to TEXT in db
+
+[33mcommit 55c1cb422dabd4af88c3742e18d5c8e6e6c71b86[m
+Merge: 9b6af86 a7d3b85
+Author: psd314 <philippesdixon@gmail.com>
+Date:   Fri Oct 13 15:13:22 2017 -0700
+
+    Merge pull request #24 from msgctcheng/d3js
+    
+    D3js
+
+[33mcommit a7d3b85942c25731bc532ff0c0cbfdfa74f14713[m
+Merge: b908833 9b6af86
+Author: Philippe Dixon <pdixon555@hotmail.com>
+Date:   Fri Oct 13 18:12:51 2017 -0400
+
+    Merge branch 'master' of https://github.com/msgctcheng/Project2 into d3js
+
+[33mcommit b90883328801585e9d6839014d36a6add3c8afc2[m
+Author: Philippe Dixon <pdixon555@hotmail.com>
+Date:   Fri Oct 13 18:12:35 2017 -0400
+
+    remove merge conflict numbers
+
+[33mcommit 9b6af868013fa3b2d5c70f7e9faea6f24119a13a[m
+Merge: 2dbbbf1 52218f5
+Author: psd314 <philippesdixon@gmail.com>
+Date:   Fri Oct 13 15:05:46 2017 -0700
+
+    Merge pull request #23 from msgctcheng/d3js
+    
+    fix handlebarsObj in controller
+
+[33mcommit 52218f5bcd8361b96de9072cd969919ea2b0da16[m
+Author: Philippe Dixon <pdixon555@hotmail.com>
+Date:   Fri Oct 13 18:05:13 2017 -0400
+
+    fix handlebarsObj in controller
+
+[33mcommit 2dbbbf1fd9466bff7c918686df3b8991ab63436f[m
+Merge: 9fdae4d d4ef442
+Author: psd314 <philippesdixon@gmail.com>
+Date:   Fri Oct 13 15:00:44 2017 -0700
+
+    Merge pull request #22 from msgctcheng/d3js
+    
+    D3js
+
+[33mcommit d4ef442b4b850f81ce6e80a90c0fdb445020f1a1[m
+Merge: c73a0b8 9fdae4d
+Author: Philippe Dixon <pdixon555@hotmail.com>
+Date:   Fri Oct 13 18:00:16 2017 -0400
+
+    fixed merge conflict
+
+[33mcommit c73a0b89965996bbb78f59d110a1841fd86c4dc3[m
+Author: Philippe Dixon <pdixon555@hotmail.com>
+Date:   Fri Oct 13 17:59:15 2017 -0400
+
+    added sign in/sign out to main handlebars
+
+[33mcommit 9fdae4d9345d4583219cb067260731a5258a27d2[m
+Merge: c1b6e3b 30130e4
+Author: Christopher Cheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 17:40:10 2017 -0400
+
+    Merge pull request #21 from msgctcheng/style
+    
+    Update CSS(4) / Add Modal
+
+[33mcommit 30130e48f4c6ff19ca79471f16496c4aec93e31a[m
+Author: msgctcheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 17:39:20 2017 -0400
+
+    Update CSS(4) / Add Modal
+
+[33mcommit c1b6e3b8c4aca4d455f6cebc4730a205f594b458[m
+Merge: 1774a87 2ecabc3
+Author: Christopher Cheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 16:26:28 2017 -0400
+
+    Merge pull request #20 from msgctcheng/style
+    
+    Update CSS(3) / Added '/newuser' route to controller
+
+[33mcommit 2ecabc38af243ae06c3bc7aa1f897f03ed28997e[m
+Author: msgctcheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 16:24:05 2017 -0400
+
+    Update CSS(3) / Added '/newuser' route to controller
+
+[33mcommit 1774a87fda56973648528a08c01281632e964f9d[m
+Merge: bae968a 47959b5
+Author: Christopher Cheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 16:05:26 2017 -0400
+
+    Merge pull request #19 from msgctcheng/style
+    
+    update CSS(2)
+
+[33mcommit 47959b5f0bf8589c8c0a14781186fbeb232ac50a[m
+Author: msgctcheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 16:04:59 2017 -0400
+
+    update CSS(2)
+
+[33mcommit bae968a66c4a2c37f2a16beccbef5b277d646098[m
+Merge: 98b4d75 cf51674
+Author: Christopher Cheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 15:07:20 2017 -0400
+
+    Merge pull request #18 from msgctcheng/style
+    
+    Update CSS
+
+[33mcommit cf516745d6748f6dec1961206d4e2374cc48f6b1[m
+Author: msgctcheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 15:06:41 2017 -0400
+
+    Update CSS
+
+[33mcommit 98b4d75bc96a906742f1e32d7bb64a1a2e977815[m
+Merge: a67b631 9c51e38
+Author: Christopher Cheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 14:28:03 2017 -0400
+
+    Merge pull request #17 from msgctcheng/style
+    
+    Changed Color Scheme
+
+[33mcommit 9c51e38917dc7a8d0eb747663755b31d0c7c6c5c[m
+Author: msgctcheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 14:27:00 2017 -0400
+
+    Changed Color Scheme
+
+[33mcommit a67b6310751c3ae374610f67065cc8a858709494[m
+Merge: 31d3045 61e1522
+Author: Christopher Cheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 14:06:53 2017 -0400
+
+    Merge pull request #16 from msgctcheng/style
+    
+    Added some styling (Incomplete)
+
+[33mcommit 61e1522574634cc3ade49c233b76b232d3a2d6d4[m
+Author: msgctcheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 14:06:11 2017 -0400
+
+    Added some styling (Incomplete)
+
+[33mcommit 31d30458831cbe973cd265996e5f6824e9281be6[m
+Merge: df8c8fb 2a11ad4
+Author: Christopher Cheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 12:37:31 2017 -0400
+
+    Merge pull request #15 from msgctcheng/style
+    
+    Style
+
+[33mcommit 2a11ad4aa3fe9c3319d2f47ab3f6e94f4ee83fdf[m
+Author: msgctcheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 12:35:56 2017 -0400
+
+    Fix version
+
+[33mcommit d8ad782ceee2779848931b59ac1a53271b4cf07b[m
+Author: msgctcheng <msgctcheng@gmail.com>
+Date:   Fri Oct 13 12:32:12 2017 -0400
+
+    updated new.handlebars
+
+[33mcommit c56993e6041c477542d9d59887063
