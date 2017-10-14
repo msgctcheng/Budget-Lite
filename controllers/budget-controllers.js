@@ -75,6 +75,7 @@ router.get("/api/transactions", function(req, res) {
 });
 
 router.post("/api/transactions", function(req, res) {
+    //do additing/subtraction math here
     db.Transactions.create({
             Balance: req.body.Balance,
             Amount: req.body.Amount,
